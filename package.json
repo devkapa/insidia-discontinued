@@ -1,0 +1,22 @@
+{
+  "name": "studium",
+  "version": "1.0.0",
+  "description": "Insidia is a smart, student oriented math assistant part of skarcade.",
+  "main": "wrapper.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devkapa/Studium.git"
+  },
+  "author": "Dev Kapadia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devkapa/Studium/issues"
+  },
+  "homepage": "https://github.com/devkapa/Studium#readme",
+  "devDependencies": {
+    "electron": "^22.2.0"
+  }
+}
