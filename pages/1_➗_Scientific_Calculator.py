@@ -1,5 +1,5 @@
 import streamlit as st
-from bokeh.plotting import figure
+import sympy as sp
 
 
 def main():
@@ -14,17 +14,42 @@ def main():
             horizontal=True
         )
 
-    x = [1, 2, 3, 4, 5]
-    y = [6, 7, 2, 4, 5]
+    with st.container():
+        st.latex("")
 
-    p = figure(
-        title='simple line example',
-        x_axis_label='x',
-        y_axis_label='y')
-
-    p.line(x, y, legend_label='Trend', line_width=2)
-
-    st.bokeh_chart(p, use_container_width=True)
+    with st.container():
+        scientific_1, scientific_2, scientific_3, gap, number_1, number_2, number_3, operations_1 = st.columns([2, 2, 2, 1, 1, 1, 1, 2])
+        with scientific_1:
+            st.button("sin(x)")
+            st.button("x²")
+        with scientific_2:
+            st.button("cos(x)")
+            st.button("xⁿ")
+        with scientific_3:
+            st.button("tan(x)")
+            st.button("⁄")
+        with gap:
+            st.markdown("#")
+            st.markdown("#")
+            st.markdown("##")
+            st.button("0")
+        with number_1:
+            st.button("7")
+            st.button("4")
+            st.button("1")
+        with number_2:
+            st.button("8")
+            st.button("5")
+            st.button("2")
+        with number_3:
+            st.button("9")
+            st.button("6")
+            st.button("3")
+        with operations_1:
+            st.button(r"\+")
+            st.button("−")
+            st.button("÷")
+            st.button("×")
 
 
 if __name__ == '__main__':
